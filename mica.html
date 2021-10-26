@@ -16,6 +16,8 @@
         font-family: Inter, sans-serif;
         font-variation-settings: 'wght' 450;
         line-height: 1.5;
+    }
+    .bg {
         background-image: url('clouds.jfif');
     }
     ::-webkit-scrollbar-track {
@@ -42,18 +44,51 @@
         border-width: thin;
         border-style: solid;
         border-color: #e1e6ea;
-        backdrop-filter: blur(30px);
-        background-color: #f7f9fcf0;
+        -webkit-backdrop-filter: blur(40px);
+        backdrop-filter: blur(40px);
+        background-color: #f7f9fcdb;
         overflow-y: auto;
         box-shadow: 0px 25.6px 57.6px rgb(0 0 0 / 14%), 0px 0px 16.4px rgb(0 0 0 / 12%);
-        }
+    }
+    .btn {
+        cursor: pointer;
+        font-family: inherit;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: .5rem;
+        width: 20%;
+        font-size: inherit;
+        border-radius: .25rem;
+    }
+    .btn:hover {
+        filter: brightness(1.1);
+    }
+    .btn-info {
+        color: #fff;
+        background-color: #17a2b8;
+        border-color: #17a2b8;
+    }
+    .btn-secondary {
+        color: #000;
+        background-color: #f8fafd;
+        border-color: #c4cad0;
+    }
     @media (prefers-color-scheme: dark) {
         .mica {
-        color: white;
+            color: white;
+            background-color: #232734db;
+            border-color: #2d2d2d1a;
         }
-        .mica {
-        background-color: #232734e8;
-        border-color: #2d2d2d1a;
+        .btn-secondary {
+            color: #fff;
+            background-color: #2d2d2d;
+            border-color: #303030;
         }
     }
     </style>
@@ -61,8 +96,10 @@
 
 <body>
     <div class="mica">
-    <p>Mica material. It's a little different from acrylic material. Can work with or without a background. By the way...<br />
-    In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called greeking, which allows designers to consider the form of a webpage or publication, without the meaning of the text influencing the design.<br />
+    <p>Mica material. It's a little different from acrylic material. Can work with or without a background. By the way...</p>
+    <button type="button" id="btntoggle" class="btn btn-info">Mica button toggle</button> 
+    <button type="button" class="btn btn-secondary">Mica button for fun</button>
+    <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called greeking, which allows designers to consider the form of a webpage or publication, without the meaning of the text influencing the design.<br />
     Lorem ipsum is typically a corrupted version of 'De finibus bonorum et malorum', a 1st century BC text by the Roman statesman and philosopher Cicero, with words altered, added, and removed to make it nonsensical and improper Latin.<br />
     Versions of the Lorem ipsum text have been used in typesetting at least since the 1960s, when it was popularized by advertisements for Letraset transfer sheets. Lorem ipsum was introduced to the digital world in the mid-1980s, when Aldus employed it in graphic and word-processing templates for its desktop publishing program PageMaker. Other popular word processors, including Pages and Microsoft Word, have since adopted Lorem ipsum, as have many LaTeX packages, web content managers such as Joomla! and WordPress, and CSS libraries such as Semantic UI.<br />
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br />
@@ -75,5 +112,11 @@
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br />
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
+    <script>
+    var btntoggle = document.getElementById('btntoggle');
+    btntoggle.addEventListener('click',function() {
+        document.body.classList.toggle('bg');
+    });
+</script>
 </body>
 </html>
