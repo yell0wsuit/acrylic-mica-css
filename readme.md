@@ -8,3 +8,8 @@ It is based on https://docs.microsoft.com/en-us/windows/apps/design/style/acryli
 Mica material can be used with or without ``backdrop-filter``. It is based on https://docs.microsoft.com/en-us/windows/apps/design/style/mica.
 
 All themes here have black variant for dark theme, which are also based on official documentation.
+
+# Demo
+[Acrylic demo](https://yell0wsuit.github.io/acrylic-mica-css/acrylic.html)
+
+[Mica demo](https://yell0wsuit.github.io/acrylic-mica-css/mica.html)
