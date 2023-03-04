@@ -1,6 +1,8 @@
 # Microsoft's Acrylic & Mica material design in CSS
 This repo attempts to recreate Acrylic and Mica material design in CSS.
 
+**==NEW! Also check out my [fbgdbg - Facebook Gradient Background](https://github.com/yell0wsuit/fbgdbg) repo - colorful gradient background found in Facebook Account Center setting==**
+
 Acrylic material is implemented by using ``backdrop-filter``. This feature works best with a background image. Currently this only implemented 2 out of 4 layers: blur and noise texture. It is based on [this documentation](https://docs.microsoft.com/en-us/windows/apps/design/style/acrylic).  
 Note that Firefox does not support this feature, to use this, you need to enable ``layout.css.backdrop-filter.enabled`` and ``gfx.webrender.all`` in ``about:config``.
 
